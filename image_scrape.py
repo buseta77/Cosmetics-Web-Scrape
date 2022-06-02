@@ -397,7 +397,7 @@ def get_images_temptalia(url, product_reference):
 
 def upload_firebase(login_json, bucket_name, image_folder):
     cred = credentials.Certificate(login_json)
-    firebase_admin.initialize_app(cred, {'storageBucket': 'my-way-beauty.appspot.com'})
+    firebase_admin.initialize_app(cred, {'storageBucket': 'example.appspot.com'})
     bucket = storage.bucket(bucket_name)
     directory = image_folder
     for image in os.listdir(directory):
